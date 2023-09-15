@@ -1,0 +1,322 @@
+﻿<Window x:Class="Kutyak.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kutyak"
+        mc:Ignorable="d"
+        Title="Kutya" Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+
+            </ColumnDefinition>
+            <ColumnDefinition Width="2*">
+
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.ColumnSpan="100" Grid.RowSpan="100">
+            <Rectangle.Fill>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>30</Color.R>
+                            <Color.B>30</Color.B>
+                            <Color.G>30</Color.G>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Margin="10">
+            <Rectangle.Fill>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>35</Color.R>
+                            <Color.B>35</Color.B>
+                            <Color.G>35</Color.G>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Fill>
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>80</Color.R>
+                            <Color.G>80</Color.G>
+                            <Color.B>80</Color.B>
+
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Label Content="NEVEK SZÁMA" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Foreground="LightGray"></Label>
+        <Rectangle Grid.Column="1" Margin="10">
+            <Rectangle.Fill>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>35</Color.R>
+                            <Color.B>35</Color.B>
+                            <Color.G>35</Color.G>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Fill>
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>80</Color.R>
+                            <Color.G>80</Color.G>
+                            <Color.B>80</Color.B>
+
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Label Grid.Column="1" x:Name="lbNevekSzama" Content="0" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Foreground="LightGray"></Label>
+        <Rectangle Grid.Row="1" Grid.Column="0" Margin="10">
+            <Rectangle.Fill>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>35</Color.R>
+                            <Color.B>35</Color.B>
+                            <Color.G>35</Color.G>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Fill>
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>80</Color.R>
+                            <Color.G>80</Color.G>
+                            <Color.B>80</Color.B>
+
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Label Grid.Row="1" Grid.Column="0" Content="ÁTLAG ÉLETKOR" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Foreground="LightGray"></Label>
+        <Rectangle Grid.Row="1" Grid.Column="1" Margin="10">
+            <Rectangle.Fill>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>35</Color.R>
+                            <Color.B>35</Color.B>
+                            <Color.G>35</Color.G>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Fill>
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>80</Color.R>
+                            <Color.G>80</Color.G>
+                            <Color.B>80</Color.B>
+
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Label Grid.Row="1" x:Name="lbAtlagEletkor" Grid.Column="1" Content="0" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Foreground="LightGray"></Label>
+        <Rectangle Grid.Row="2" Grid.Column="1" Margin="10">
+            <Rectangle.Fill>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>35</Color.R>
+                            <Color.B>35</Color.B>
+                            <Color.G>35</Color.G>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Fill>
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>80</Color.R>
+                            <Color.G>80</Color.G>
+                            <Color.B>80</Color.B>
+
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Label Grid.Row="2" x:Name="lbLegidosebbKutya" Grid.Column="1" Content="n/a" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Foreground="LightGray"></Label>
+        <Rectangle Grid.Row="2" Grid.Column="0" Margin="10">
+            <Rectangle.Fill>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>35</Color.R>
+                            <Color.B>35</Color.B>
+                            <Color.G>35</Color.G>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Fill>
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>80</Color.R>
+                            <Color.G>80</Color.G>
+                            <Color.B>80</Color.B>
+
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Label Grid.Row="2" Grid.Column="0" Content="LEGIDŐSEBB KUTYA" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Foreground="LightGray"></Label>
+        <Rectangle Grid.Row="3" Grid.Column="0" Margin="10">
+            <Rectangle.Fill>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>35</Color.R>
+                            <Color.B>35</Color.B>
+                            <Color.G>35</Color.G>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Fill>
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>80</Color.R>
+                            <Color.G>80</Color.G>
+                            <Color.B>80</Color.B>
+
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Label Grid.Row="3" Grid.Column="0" Content="JANUÁR 10." FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Foreground="LightGray"></Label>
+        <Rectangle Grid.Row="3" Grid.Column="1" Margin="10">
+            <Rectangle.Fill>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>35</Color.R>
+                            <Color.B>35</Color.B>
+                            <Color.G>35</Color.G>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Fill>
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>80</Color.R>
+                            <Color.G>80</Color.G>
+                            <Color.B>80</Color.B>
+
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <DataGrid x:Name="dgRendeles" Grid.Column="1" Grid.Row="3" Background="{x:Null}" HeadersVisibility="None" BorderBrush="{x:Null}"></DataGrid>
+        <Rectangle Grid.Row="4" Grid.Column="0" Margin="10">
+            <Rectangle.Fill>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>35</Color.R>
+                            <Color.B>35</Color.B>
+                            <Color.G>35</Color.G>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Fill>
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>80</Color.R>
+                            <Color.G>80</Color.G>
+                            <Color.B>80</Color.B>
+
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Label Grid.Row="4" Grid.Column="0" Content="LEGLETERHELTEBB NAP" FontSize="29" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Foreground="LightGray"></Label>
+        <Rectangle Grid.Row="4" Grid.Column="1" Margin="10">
+            <Rectangle.Fill>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>35</Color.R>
+                            <Color.B>35</Color.B>
+                            <Color.G>35</Color.G>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Fill>
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>80</Color.R>
+                            <Color.G>80</Color.G>
+                            <Color.B>80</Color.B>
+
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Label Grid.Row="4" Grid.Column="1" Content="n/a; 0 kutya" x:Name="lbLegleterheltebb" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Foreground="LightGray"></Label>
+    </Grid>
+</Window>
