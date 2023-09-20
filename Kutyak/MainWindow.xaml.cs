@@ -30,8 +30,9 @@ namespace Kutyak
             lbAtlagEletkor.Content = kezelo.AtlagEletkor;
             Kutya legidosebb = kezelo.LegidosebbKutya;
             lbLegidosebbKutya.Content = $"{KutyaKezelo.KutyaNeve(legidosebb)}; {KutyaKezelo.KutyaFajtaMagyarul(legidosebb)}";
-            var csoportok = kezelo.Kutyak.Where(k => k.UtolsoEllenorzes == "2018.01.10").GroupBy(x => x.FajtaAzonosito);
+
             var legsurubbNap = kezelo.Kutyak.GroupBy(x => x.UtolsoEllenorzes).MaxBy(x => x.Count());
+            
             lbLegleterheltebb.Content = $"{legsurubbNap.Key}; {legsurubbNap.Count()} kutya";
         }
     }

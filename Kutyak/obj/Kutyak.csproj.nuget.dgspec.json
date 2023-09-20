@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kecskes.dominik\\source\\repos\\Kutyak\\Kutyak\\Kutyak.csproj": {}
+    "C:\\Users\\kecskes.dominik\\Source\\Repos\\KutyakWPF\\Kutyak\\Kutyak.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kecskes.dominik\\source\\repos\\Kutyak\\Kutyak\\Kutyak.csproj": {
+    "C:\\Users\\kecskes.dominik\\Source\\Repos\\KutyakWPF\\Kutyak\\Kutyak.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kecskes.dominik\\source\\repos\\Kutyak\\Kutyak\\Kutyak.csproj",
+        "projectUniqueName": "C:\\Users\\kecskes.dominik\\Source\\Repos\\KutyakWPF\\Kutyak\\Kutyak.csproj",
         "projectName": "Kutyak",
-        "projectPath": "C:\\Users\\kecskes.dominik\\source\\repos\\Kutyak\\Kutyak\\Kutyak.csproj",
+        "projectPath": "C:\\Users\\kecskes.dominik\\Source\\Repos\\KutyakWPF\\Kutyak\\Kutyak.csproj",
         "packagesPath": "C:\\Users\\kecskes.dominik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kecskes.dominik\\source\\repos\\Kutyak\\Kutyak\\obj\\",
+        "outputPath": "C:\\Users\\kecskes.dominik\\Source\\Repos\\KutyakWPF\\Kutyak\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kecskes.dominik\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MySqlConnector" Version="2.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Datas\KutyaFajtak.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

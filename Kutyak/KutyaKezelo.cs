@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using MySqlConnector;
+using System.Windows;
 
 namespace ConsoleAppKutyak
 {
@@ -17,34 +19,40 @@ namespace ConsoleAppKutyak
 
         public KutyaKezelo()
         {
-            foreach (var sor in File.ReadAllLines("Datas\\KutyaNevek.csv").Skip(1))
+            MySqlConnection kapcsolat;
+            try
             {
-                string[] mezok = sor.Split(';');
-                kutyaNevekDict.Add(int.Parse(mezok[0]), mezok[1]);
+                kapcsolat = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=;database=kutyak");
             }
-
-            foreach (var sor in File.ReadAllLines("Datas\\KutyaFajtak.csv").Skip(1))
+            catch (Exception)
             {
-                string[] mezok = sor.Split(';');
-                List<string> fajtaNevek = new List<string>();
-                fajtaNevek.Add(mezok[1]);
-                fajtaNevek.Add(mezok[2]);
-                kutyaFajtakDict.Add(int.Parse(mezok[0]), fajtaNevek);
+                MessageBox.Show("Nem tud az adatbázishoz kapcsolódni");
+                throw;
             }
+            kapcsolat.Open();
+            MySqlCommand parancs = new MySqlCommand("select * from kutya_nevek", kapcsolat);
+            MySqlDataReader olvaso = parancs.ExecuteReader();
+            while (olvaso.Read()) {
+                kutyaNevekDict[olvaso.GetInt32("id")] = olvaso.GetString("kutyanév");
+            }
+            olvaso.Close();
+            parancs = new MySqlCommand("select * from kutya_fajtak", kapcsolat);
+            olvaso = parancs.ExecuteReader();
+            while (olvaso.Read())
+            {
+                kutyaFajtakDict[olvaso.GetInt32("id")] = new List<string> { olvaso.GetString("név"), olvaso.GetString("eredeti név")};
+            }
+            olvaso.Close();
             //Kutyák adatainak beolvasása
-
-            List<string> sorok = File.ReadAllLines("Datas\\Kutyak.csv", encoding: Encoding.UTF8).ToList();
-            sorok.RemoveAt(0);
-            foreach (string s in sorok)
+            parancs = new MySqlCommand("select * from kutyak", kapcsolat);
+            olvaso = parancs.ExecuteReader();
+            while (olvaso.Read())
             {
-                string[] mezok = s.Split(';');
-                Kutya ujKutya = new Kutya(int.Parse(mezok[0]),
-                                          int.Parse(mezok[1]),
-                                          int.Parse(mezok[2]),
-                                          int.Parse(mezok[3]),
-                                          mezok[4]);
-                kutyak.Add(ujKutya);
+                kutyak.Add(new Kutya(olvaso.GetInt32("id"), olvaso.GetInt32("fajta_id"), olvaso.GetInt32("név_id"), olvaso.GetInt32("életkor"), olvaso.GetString("utolsó orvosi ellenőrzés")));
             }
+            olvaso.Close();
+            kapcsolat.Clone();
+            kapcsolat.Dispose();
         }
 
         public int NevekSzama { get => kutyaNevekDict.Count; }

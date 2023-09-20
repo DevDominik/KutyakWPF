@@ -261,7 +261,7 @@
                 </SolidColorBrush>
             </Rectangle.Stroke>
         </Rectangle>
-        <DataGrid x:Name="dgRendeles" Grid.Column="1" Grid.Row="3" Background="{x:Null}" HeadersVisibility="None" BorderBrush="{x:Null}"></DataGrid>
+        <ListBox x:Name="lsbRendeles" Grid.Column="1" Grid.Row="3" Background="{x:Null}" BorderBrush="{x:Null}"></ListBox>
         <Rectangle Grid.Row="4" Grid.Column="0" Margin="10">
             <Rectangle.Fill>
                 <SolidColorBrush>

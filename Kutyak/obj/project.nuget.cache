@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/KbXfWM+WxYbVKDwVTLpdVyinPnayKsy+IyU7uuL1G0qqtdb4ILZEn7JhL1vcu5vP1crYOjUGLbaLQ91F4gB+w==",
+  "dgSpecHash": "w0+LLCvKIVxvm3yg7AGcLbEBsBKoFJwsGHbvQyz9y5TiuJScpBFlbsXQr6l9MGlapYIjz8nU1Sp51c5KlhRcvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kecskes.dominik\\source\\repos\\Kutyak\\Kutyak\\Kutyak.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\kecskes.dominik\\Source\\Repos\\KutyakWPF\\Kutyak\\Kutyak.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kecskes.dominik\\.nuget\\packages\\mysqlconnector\\2.2.7\\mysqlconnector.2.2.7.nupkg.sha512"
+  ],
   "logs": []
 }
